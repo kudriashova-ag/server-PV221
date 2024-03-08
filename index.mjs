@@ -1,5 +1,6 @@
 import express from 'express';
 import PostsRouter from './routes/PostRoutes.mjs';
+import AuthRouter from './routes/AuthRoutes.mjs';
 import dbConnection from './db/index.mjs';
 
 const app = express();
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/posts', PostsRouter);
+app.use('', AuthRouter);
 
 
 
